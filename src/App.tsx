@@ -224,12 +224,4 @@ export default function App() {
     </div>
   )
 
-  function FormField({ label, field, type = 'text' }: { label: string; field: keyof Client; type?: string }) {
-    return (
-      <div style={{ marginBottom: 12 }}>
-        <label style={{ color: '#94a3b8', fontSize: 12, display: 'block', marginBottom: 4 }}>{label}</label>
-        <input type={type} value={(form[field] as string) || ''} onChange={e => setForm({ ...form, [field]: e.target.value })} style={{ width: '100%', background: '#1e293b', border: '1px solid #334155', borderRadius: 8, padding: '0.6rem', color: '#fff', fontSize: 14, boxSizing: 'border-box' }} />
-      </div>
-    )
   }
-}
